@@ -25,7 +25,7 @@ describe Turbulence::CommandLineInterface::ConfigParser do
 
   it "sets compute mean" do
     parse %w( --churn-mean )
-    config.compute_mean.should be_true
+    config.compute_mean.should be true
   end
 
   it "sets the exclusion pattern" do

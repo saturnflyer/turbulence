@@ -50,15 +50,15 @@ changed 1 chunks 3 / 1 lines"
     it "returns true if P4CLIENT is set " do
       ENV.stub(:[]).with("P4CLIENT").and_return("c-foo.bar")
 
-      Turbulence::Scm::Perforce.is_repo?(".").should be_true
+      Turbulence::Scm::Perforce.is_repo?(".").should be true
     end
 
     it "returns false if P4CLIENT is empty"  do
-      Turbulence::Scm::Perforce.is_repo?(".").should be_false
+      Turbulence::Scm::Perforce.is_repo?(".").should be false
     end
 
     it "returns false if p4 is not available" do
-      Turbulence::Scm::Perforce.is_repo?(".").should be_false
+      Turbulence::Scm::Perforce.is_repo?(".").should be false
     end
   end
 

@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.email       = ["chad@chadfowler.com", "mfeathers@obtiva.com", "coreyhaines@gmail.com"]
   s.homepage    = "http://chadfowler.com"
   s.add_dependency "flog", "~>4.1"
-  s.add_dependency "json", ">= 1.4.6"
+  s.add_dependency "json", ">= 2.7.2"
   s.add_dependency "launchy", ">= 2.0.0"
-  s.add_development_dependency 'rspec', '~> 2.14.0'
-  s.add_development_dependency 'rake'
+  s.add_development_dependency "rspec", "~> 3.13.0"
+  s.add_development_dependency "rake"
 
   s.summary     = %q{Automates churn + flog scoring on a git repo for a Ruby project}
   s.description = %q{Automates churn + flog scoring on a git repo for a Ruby project. Based on the article https://www.stickyminds.com/article/getting-empirical-about-refactoring}
@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = ">= 3.2.0"
 end

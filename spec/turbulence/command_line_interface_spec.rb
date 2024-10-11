@@ -27,7 +27,7 @@ describe Turbulence::CommandLineInterface do
       cli = Turbulence::CommandLineInterface.new(%w(--exclude turbulence), :output => nil)
       cli.generate_bundle
       lines = File.new('turbulence/cc.js').readlines
-      lines.any? { |l| l =~ /turbulence\.rb/ }.should be_false
+      lines.any? { |l| l =~ /turbulence\.rb/ }.should be false
     end
   end
 end

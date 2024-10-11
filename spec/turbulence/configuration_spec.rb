@@ -3,11 +3,11 @@ require 'turbulence'
 
 describe Turbulence::Configuration do
   describe "defaults" do
-    its(:output)     { should eq(STDOUT) }
-    its(:directory)  { should eq(Dir.pwd) }
-    its(:graph_type) { should eq('turbulence') }
-    its(:scm_name)   { should eq('Git') }
-    its(:scm)        { should eq(Turbulence::Scm::Git) }
+    it { expect(subject.output).to eq(STDOUT) }
+    it { expect(subject.directory).to eq(Dir.pwd) }
+    it { expect(subject.graph_type).to eq('turbulence') }
+    it { expect(subject.scm_name).to eq('Git') }
+    it { expect(subject.scm).to eq(Turbulence::Scm::Git) }
   end
 end
 
